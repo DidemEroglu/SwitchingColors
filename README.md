@@ -1,4 +1,4 @@
-# SwitchingColors
+# SwitchingColors # VanillaJS # HTML # CSS 
  Switching page color with color buttons
 In this project i created a page with HTML and styled the page with CSS.
 I made page functions using Vanilla JS . 
