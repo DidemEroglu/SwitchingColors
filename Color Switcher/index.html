@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<!-- custom css file link -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="color-switcher">
+        <div class="switcher-btn">
+<i class="fas fa-cog"></i>
+        </div>
+
+        <h3>Select Color</h3>
+        <div class="theme-buttons-container">
+            <span class="theme-buttons" data-color="#8e44ad" style="background: #8e44ad;"></span>
+            <span class="theme-buttons" data-color="#2980b9" style="background: #2980b9;"></span>
+            <span class="theme-buttons" data-color="#f39c12" style="background: #f39c12;"></span>
+            <span class="theme-buttons" data-color="#27ae60" style="background: #27ae60;"></span>
+            <span class="theme-buttons" data-color="#e74c3c" style="background: #e74c3c;"></span>
+            <span class="theme-buttons" data-color="#e84393" style="background: #e84393;"></span>
+            <span class="theme-buttons" data-color="#ff4757" style="background: #ff4757;"></span>
+            <span class="theme-buttons" data-color="#ffc312" style="background: #ffc312;"></span>
+            <span class="theme-buttons" data-color="#b29269" style="background:#b29269;"></span>
+            <span class="theme-buttons" data-color="#86c732" style="background: #86c732;"></span>
+            <span class="theme-buttons" data-color="#d6f5d5" style="background: #d6f5d5;"></span>
+            <span class="theme-buttons" data-color="#9cb0a4" style="background: #9cb0a4;"></span>
+            <span class="theme-buttons" data-color="#e2721d" style="background: #e2721d;"></span>
+            <span class="theme-buttons" data-color="#cefa09" style="background: #cefa09;"></span>
+            <span class="theme-buttons" data-color="#f70aff" style="background: #f70aff;"></span>
+            <span class="theme-buttons" data-color="#3afc21" style="background: #3afc21;"></span>
+            <span class="theme-buttons" data-color="#000000" style="background: #000000;"></span>
+            <span class="theme-buttons" data-color="#3f2a04" style="background: #3f2a04;"></span>
+            <span class="theme-buttons" data-color="#a3e4d7" style="background: #a3e4d7;"></span>
+            <span class="theme-buttons" data-color="#f0b27a" style="background: #f0b27a;"></span>
+            <span class="theme-buttons" data-color="#2e4053" style="background: #2e4053;"></span>
+            <span class="theme-buttons" data-color="#4a235a" style="background: #4a235a;"></span>
+            <span class="theme-buttons" data-color="#0b5345" style="background: #0b5345;"></span>
+            <span class="theme-buttons" data-color="#7e5109" style="background: #7e5109;"></span>
+            
+
+        </div>
+    </div>
+    <div class="container">
+        <h1>Color Switcher</h1>
+    </div>
+
+<script>
+    document.querySelector('.switcher-btn').onclick=() =>{
+        document.querySelector('.color-switcher').classList.toggle('active');
+    }
+
+    let themeButtons=document.querySelectorAll('.theme-buttons');
+    themeButtons.forEach(color =>{
+color.addEventListener('click',()=>{
+let dataColor= color.getAttribute('data-color');
+document.querySelector(':root').style.setProperty('--main-color', dataColor)
+});
+    });
+</script>
+
+</body>
+</html>
